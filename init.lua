@@ -32,8 +32,7 @@ require('lazy').setup({
     { 'numToStr/Comment.nvim',    opts = {} },
     {
         -- Highlight, edit, and navigate code
-        dir = '/home/ntyunyayev/Workspace/Perso/nvim-treesitter',
-        dev = true,
+        'ntyunyayev/nvim-treesitter',
         dependencies = {
             'nvim-treesitter/nvim-treesitter-textobjects',
         },
@@ -131,7 +130,7 @@ end, 0)
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.npf = {
     install_info = {
-        url = "/home/ntyunyayev/Workspace/Perso/tree-sitter-npf",
+        url = "https://github.com/ntyunyayev/tree-sitter-npf",
         files = { "src/parser.c" },
         branch = "main",
         generate_requires_npm = false,
@@ -145,8 +144,5 @@ vim.filetype.add {
         npf = 'npf',
     },
 }
-local ft = require('Comment.ft')
-ft
--- Set only line comment
-    .set('npf', '//%s')
+
 
