@@ -131,7 +131,7 @@ local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.npf = {
     install_info = {
         url = "https://github.com/ntyunyayev/tree-sitter-npf",
-        files = { "src/parser.c" },
+        files = { "src/parser.c", "src/scanner.c" },
         branch = "main",
         generate_requires_npm = false,
         requires_generate_from_grammar = false,
@@ -144,5 +144,3 @@ vim.filetype.add {
         npf = 'npf',
     },
 }
-
-
